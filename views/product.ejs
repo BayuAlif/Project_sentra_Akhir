@@ -1,0 +1,39 @@
+<%- include('partials/header') %>
+        <%- include('partials/nav') %>
+            <main class="main">
+                <table class="table">
+                    <thead>
+                        <th scope="col">id</th>
+                        <th scope="col">ProductImage</th>
+                        <th scope="col">Nama Produk</th>
+                        <th scope="col">Harga Produk</th>
+                        <th scope="col">Kategori</th>
+                        <th scope="col">Rating</th>
+                        <th scope="col">Brand</th>
+                    </thead>
+                </table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <%= produk.id %>
+                        </td>
+                        <td style="text-align: center;"><img src="data:image/png;base64,<%=produk.imgHERE%>"
+                                alt="EMBEDDED IMAGE" width="100px"></td>
+                        <td style="max-width: 250px;">
+                            <%= produk.nama_produk %>
+                        </td>
+                        <td>$<%= produk.harga %>
+                        </td>
+                        <td>
+                            <%= produk.category %>
+                        </td>
+                        <td><i class="fa fa-star" style="font-size: 16px;"></i>
+                            <%= produk.rating %>
+                        </td>
+                        <td>
+                            <%= produk.brand %>
+                        </td>
+                    </tr>
+                </tbody>
+            </main>
+    <%- include('partials/footer') %>

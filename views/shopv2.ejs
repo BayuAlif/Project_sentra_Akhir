@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+        <%- include('partials/nav') %>
+            <main class="content">
+                <h1>Products</h1>
+                <div class="products">
+                    <% for (let produk of produks) { %>
+                    <a href="/product?id=<%=produk.id%>">
+                            <div class="prod-box">
+                                <img src="data:image/png;base64,<%=produk.imgHERE%>" title="<%= produk.nama_produk %>">
+                                <div class="text">  
+                                    <span class="prod-brand"><%= produk.brand %></span>
+                                    <span class="prod-name"><%= produk.nama_produk %></span>
+                                    <span class="rating">★ <%= produk.rating %></span>
+                                    <span class="prod-price" style="color: #5d5fcc;">$<%= produk.harga %></span>
+                                </div>
+                            </div>
+                    </a>
+                    <% } %>
+                </div>
+            </main>
+    <%- include('partials/footer') %>

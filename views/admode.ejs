@@ -1,0 +1,43 @@
+<%- include('partials/header') %>
+        <%- include('partials/nav') %>
+        <main class="main">
+            <h4>Add photo directly to DB</h4>
+            <form action="/upload" enctype="multipart/form-data" method="POST">
+                <input type="text" name="product" placeholder="product" required>
+                <input type="text" name="price" placeholder="price" required>
+                <input type="text" name="category" placeholder="category" required>
+                <input type="tel" name="rating" placeholder="rating" required>
+                <input type="text" name="brand" placeholder="brand name" required>
+                <input type="file" name="ProductImage" required>
+                <!-- <input type="submit" value="Submit"> -->
+                <button class="button button-primary">ADD PHOTO TO DB</button>
+            </form>
+            <table class="table">
+                <thead>
+                    <th scope="col">id</th>
+                    <th scope="col">ProductImage</th>
+                    <th scope="col">Nama Produk</th>
+                    <th scope="col">Harga Produk</th>
+                    <th scope="col">Kategori</th>
+                    <th scope="col">Rating</th>
+                    <th scope="col">Brand</th>
+                    <th scope="col" colspan="2">Edit</th>
+                </thead>
+                <tbody>
+                    <% for (let produk of produks) { %>
+                    <tr>
+                        <td><%= produk.id %></td>
+                        <td style="text-align: center;"><img src="data:image/png;base64,<%=produk.imgHERE%>" alt="EMBEDDED IMAGE" width="100px"></td>    
+                        <td style="max-width: 250px;"><%= produk.nama_produk %></td>    
+                        <td>$<%= produk.harga %></td>
+                        <td><%= produk.category %></td>
+                        <td><i class="fa fa-star" style="font-size: 16px;"></i> <%= produk.rating %></td>
+                        <td><%= produk.brand %></td>
+                        <td style="text-align: center;"><a href="/remove/<%=produk.id%>">Update</a></td>
+                        <td style="text-align: center;"><a href="/remove/<%=produk.id%>">Delete</a></td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </main class="main">
+<%- include('partials/footer') %>
