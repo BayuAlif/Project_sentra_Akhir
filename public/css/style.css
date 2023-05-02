@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
     --main-bg-col: #24292e;
@@ -26,12 +26,42 @@
     position: fixed;
     background: var(--main-bg-col);
     color: var(--main-text-col);
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .banner  {
     display: inline-block;
 }
+
+.banners-mid{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-image: url(../images/banner/bot\ banner.png);
+    width: 100%;
+    height: 30vh;
+    margin: 90px 0 ;
+}
+
+.banners-mid h2{
+    color: #2d3135;
+    padding: 10px 0;
+    font-size: 46px;
+    line-height: 54px;
+    font-weight: 800;
+}
+
+.banners-mid h2 span{
+    color: red;
+}
+
+.banners-mid h4{
+    font-size: 25px;
+    color: rgb(104, 102, 102);
+}
+
 
 a.banner:hover img::before{
     content: '';
@@ -67,7 +97,7 @@ a.banner:hover img::before{
 .navbar .navbar-righty {
     display: flex;
     align-items: center;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
 }
 
 .navbar .navbar-righty .search input,
@@ -140,7 +170,6 @@ main.content .category {
     display: flex;
     flex-direction: column;
     text-align: center;
-    border-bottom: 43px solid cyan;
 }
 
 main.content h1,
@@ -215,7 +244,7 @@ main.content .category .cat-container {
     background: var(--main-text-col);
     border-radius: 15px 5px 15px;
     width: 224px;
-    overflow: scroll;
+    /* overflow: scroll; */
 }
 
 .products a:hover {

@@ -49,5 +49,34 @@
                         </a>
                     </div>
                 </section>
+
+                <section class="banner-mid">
+                    <div class="banners-mid">
+
+                        <h4>HOT NOW</h4>
+                        <h2>New product up to
+                         <span>20% off</span>
+                         ' - Ram & SSD'
+                        </h2>
+                    </div>
+                </section>
+
+        <section class="product">
+            <div class="products">
+                <% for (let produk of produks) { %>
+                <a href="/product?id=<%=produk.id%>">
+                        <div class="prod-box">
+                            <img src="data:image/png;base64,<%=produk.imgHERE%>" title="<%= produk.nama_produk %>">
+                            <div class="text">  
+                                <span class="prod-brand"><%= produk.brand %></span>
+                                <span class="prod-name"><%= produk.nama_produk %></span>
+                                <span class="rating">★ <%= produk.rating %></span>
+                                <span class="prod-price" style="color: #5d5fcc;">$<%= produk.harga %></span>
+                            </div>
+                        </div>
+                </a>
+                <% } %>
+            </div>
+        </section>
             </main>
     <%- include('partials/footer') %>

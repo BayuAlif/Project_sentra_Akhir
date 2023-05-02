@@ -26,7 +26,11 @@ db.connect((err) => {
 })
 
 app.get("/", (req, res) => {
-    res.render("index", {title: "Tabel Produk", active: "home"})
+    const q = "SELECT * FROM `produk`"  
+    db.query(q, (err, result) => {
+        const produks = JSON.parse(JSON.stringify(result))
+        res.render("index", {title: "Home", produks: produks, active: "home"}) 
+})
 })
 
 app.get("/admin", (req, res) => {
@@ -88,7 +92,7 @@ app.get("/search", (req, res) => {
         res.render("search", {title: "Search Results ", produks: produks}) 
     })
 })
-
+//adadadadadadadadadadadda
 
 const port = 8000
 
