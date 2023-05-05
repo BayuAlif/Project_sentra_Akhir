@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
 
 :root {
     --main-bg-col: #24292e;
@@ -12,6 +13,77 @@
     padding: 0;
     font-family: 'League Spartan', sans-serif;
     box-sizing: border-box;
+}
+
+/* blog */
+.blog{
+    padding-top: 90px;
+}
+
+.blog .blog-box{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    padding-bottom: 90px;
+}
+
+.blog .blog-img{
+    margin-right: 20px;
+}
+
+.blog img{
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog .blog-details{
+    padding-top: 0;
+    width: 100%;
+    margin-right: 40px;
+    font-size: 17px;
+}
+
+.blog .blog-details h4{
+    padding-bottom: 10px;
+}
+
+.blog .blog-details a{
+    text-decoration: none;
+    font-size: 11px;
+    color: white;
+    font-weight: 700;
+    position: relative; 
+}
+
+.blog .blog-details a::after{
+    content: "";
+    width: 50px;
+    height: 1px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 4px;
+    right: -60px;
+}
+
+.blog .blog-details a:hover{
+    color: rgb(85, 179, 247);
+}
+
+.blog .blog-details a:hover::after{
+    background-color: rgb(85, 179, 247);
+}
+
+.blog .blog-box h1{
+    position: absolute;
+    top: -90px;
+    left: 0;
+    font-size: 70px;
+    font-weight: 700;
+    color: wheat;
+    opacity: 80%;
+    z-index: -9;
 }
 
 .container {
@@ -33,7 +105,189 @@
     display: inline-block;
 }
 
-.banners-mid{
+#banner-shop.blog-banner{
+    background-image: url(../images/category/blog-banner.png);
+    width: 100%;
+    height: 30vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+
+#banner-shop.blog-banner h2 {
+    color: wheat;
+    font-family: 'Knewave', cursive;
+    font-weight: 400;
+    font-size: 80px;
+
+}
+
+#banner-shop.blog-banner p {
+    color: white;
+    font-size: 30px;
+}
+
+/* contact-us */
+#banner-shop.contact-banner{
+    background-image: url(../images/category/contact-banner.png);
+    width: 100%;
+    height: 30vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+
+#banner-shop.contact-banner h2 {
+    color: wheat;
+    font-family: 'Knewave', cursive;
+    font-weight: 300;
+
+}
+
+#banner-shop.contact-banner p {
+    color: white;
+}
+
+#contact .contact-info{
+    margin: 2rem 0;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+#contact .contact-info span{
+    display: block;
+    padding-top: 8px;
+    color: white;
+}
+
+
+#contact .contact-info div{
+    margin: 0.8rem 0;
+    padding: 1rem;
+}
+
+#contact .contact-info span i{
+    font-size: 30px;
+    color: wheat;
+    padding-bottom: 0.9rem;
+}
+
+
+#contact .contact-info div span:nth-child(2){
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+#contact .contact-info .text{
+    padding-top: 0.8rem;
+}
+
+#contact .contac-form{
+    padding: 2rem;
+    border-top: 1px solid white;
+}
+
+#contact .contac-form form{
+    padding-bottom: 1rem;
+}
+
+#contact .form-control{
+    width: 100%;
+    border: 2px solid #c7c7c7;
+    border-radius: 5px;
+    padding: 0.7rem;
+    margin: 0.6rem 0;
+    font-family: 'League Spartan', sans-serif;    ;
+    font-size: 1rem;
+    outline: 0;
+}
+
+#contact .form-control:focus{
+    box-shadow: 0 0 6px -3px rgb(244, 49, 49);
+}
+
+#contact .contact-form form div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0.6rem;
+}
+
+#contact .send-btn {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: white;
+    background: #f7327a;
+    border: none;
+    border-radius: 5px;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+#contact .send-btn:hover{
+    opacity: 0.8;
+}
+
+#contact .contact-form > div img{
+    width: 35%;
+}
+
+#contact .contact-form > div{
+    margin: auto;
+    text-align: center;
+}
+
+#contact .contact-body{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* contact media */
+@media screen and (min-width: 768px){
+    .contact-bg .text{
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact-info{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 992px){
+       .contact-bg .text{
+        width: 50%;
+       } 
+
+       .contac-form{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+       }
+}
+
+@media screen and (min-width: 1200px){
+    .contact-info{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* map */
+.map{
+    padding-top: 90px;
+}
+
+#banners-mid{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -45,7 +299,7 @@
     margin: 90px 0 ;
 }
 
-.banners-mid h2{
+#banners-mid h2{
     color: #2d3135;
     padding: 10px 0;
     font-size: 46px;
@@ -53,11 +307,11 @@
     font-weight: 800;
 }
 
-.banners-mid h2 span{
+#banners-mid h2 span{
     color: red;
 }
 
-.banners-mid h4{
+#banners-mid h4{
     font-size: 25px;
     color: rgb(104, 102, 102);
 }

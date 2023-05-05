@@ -92,7 +92,15 @@ app.get("/search", (req, res) => {
         res.render("search", {title: "Search Results ", produks: produks}) 
     })
 })
-//adadadadadadadadadadadda
+
+//blog
+app.get("/blog", (req, res) =>{
+    res.render("blog", {title: "Blog", active: "blog"})
+})
+
+app.get("/contact", (req, res) =>{
+    res.render("contact", {title: "Contact-us", active: "contact"})
+})
 
 const port = 8000
 
