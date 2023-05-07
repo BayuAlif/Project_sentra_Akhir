@@ -48,6 +48,15 @@
     let active = document.getElementById("<%- active %>")
     active.className = "active"
 
+    function hide() {
+        let box = document.getElementById("pop-up");
+        box.style.display = "none";
+    }
+
+    function show() {
+        let box = document.getElementById("pop-up");
+        box.style.display = "flex";
+    }
 </script>
 
 </html>

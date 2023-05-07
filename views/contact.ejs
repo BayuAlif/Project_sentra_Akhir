@@ -6,12 +6,13 @@
         <p>Leave a message to us, we love hear from you</p>
     </section>
 
-    <div class="pop-up">
+    <!-- Pop UP -->
+    <div class="pop-up" id="pop-up">
+        <div class="popup-background" onclick="hide()"></div>
         <div class="box-pop">
-            <img src="images/berhasil.gif" alt="">
+            <img src="images/berhasil.gif" alt="berhasil">
         </div>
     </div>
-
 
     <section id="contact">
         <div class="contact-body">
@@ -34,7 +35,7 @@
             </div>
             <div class="contact-form">
 
-                <form action="/send" method="POST">
+                <form action="/send" method="POST" onsubmit="show()">
                     <div>
                         <input type="text" class="form-control" placeholder="First Name" name="fname">
                         <input type="text" class="form-control" placeholder="Last Name" name="lname">
