@@ -496,7 +496,7 @@ main.content .category .cat-container {
     margin: 28px;
     padding: 18px;
     background: var(--main-text-col);
-    border-radius: 15px 5px 15px;
+    border-radius: 0 20px 0 0;
     width: 224px;
     /* overflow: scroll; */
 }
@@ -510,6 +510,7 @@ main.content .category .cat-container {
     font-weight: bold;
     font-size: 18px;
     height: 110px;
+    overflow-y: scroll;
 }
 
 .products a .prod-box span.prod-brand {
