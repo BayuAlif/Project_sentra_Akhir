@@ -17,21 +17,21 @@
                         <td>
                             <%= produk.id %>
                         </td>
-                        <td style="text-align: center;"><img src="data:image/png;base64,<%=produk.imgHERE%>"
+                        <td style="text-align: center;"><img src="data:image/png;base64,<%=produk[0].imgHERE%>"
                                 alt="EMBEDDED IMAGE" width="100px"></td>
                         <td style="max-width: 250px;">
-                            <%= produk.nama_produk %>
+                            <%= produk[0].nama_produk %>
                         </td>
-                        <td>$<%= produk.harga %>
+                        <td>$<%= produk[0].harga %>
                         </td>
                         <td>
-                            <%= produk.category %>
+                            <%= produk[0].category %>
                         </td>
                         <td><i class="fa fa-star" style="font-size: 16px;"></i>
-                            <%= produk.rating %>
+                            <%= produk[0].rating %>
                         </td>
                         <td>
-                            <%= produk.brand %>
+                            <%= produk[0].brand %>
                         </td>
                     </tr>
                 </tbody>

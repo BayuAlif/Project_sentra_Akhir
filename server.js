@@ -21,7 +21,7 @@ const upload = multer({ storage: multer.memoryStorage() })
 
 db.connect((err) => {
     if (err) throw err
-    console.log("Database connected.")
+    console.log("DB connected.")
 
 })
 
@@ -52,10 +52,11 @@ app.get("/shop", (req, res) => {
 
 //
 app.get("/product", (req, res) => {
-    q = `SELECT * FROM \`produk\` WHERE id = ${req.query.id}`  
+    q = `SELECT * FROM \`produk\` WHERE id = '${req.query.id}'`  
     db.query(q, (err, result) => {
-        res.render("product", {title: "Summary", produk: result, active: "shop"}) 
-        console.log("hasil database ->", result)
+        const produk = JSON.parse(JSON.stringify(result))
+        res.render("product", {title: "Summary", produk: produk, active: "shop"}) 
+        // console.log("hasil ->", produk[0].id)
     })
 })
 
@@ -86,7 +87,10 @@ app.get("/remove/(:id)", (req, res) => {
 
 // SEARCH
 app.get("/search", (req, res) => {
-    q = `SELECT * FROM \`produk\` WHERE ${req.query.category}`
+    q = `SELECT * FROM \`produk\` WHERE 
+        'nama_produk' LIKE %${req.query.category}%
+        'category' LIKE %${req.query.category}%
+        'brand' LIKE %${req.query.category}%`
     db.query(q, (err, result) => {
         const produks = JSON.parse(JSON.stringify(result))
         res.render("search", {title: "Search Results ", produks: produks}) 
