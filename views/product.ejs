@@ -1,39 +1,30 @@
 <%- include('partials/header') %>
         <%- include('partials/nav') %>
             <main class="main">
-                <table class="table">
-                    <thead>
-                        <th scope="col">id</th>
-                        <th scope="col">ProductImage</th>
-                        <th scope="col">Nama Produk</th>
-                        <th scope="col">Harga Produk</th>
-                        <th scope="col">Kategori</th>
-                        <th scope="col">Rating</th>
-                        <th scope="col">Brand</th>
-                    </thead>
-                </table>
-                <tbody>
-                    <tr>
-                        <td>
-                            <%= produk.id %>
-                        </td>
-                        <td style="text-align: center;"><img src="data:image/png;base64,<%=produk[0].imgHERE%>"
-                                alt="EMBEDDED IMAGE"></td>
-                        <td style="max-width: 250px;">
-                            <%= produk[0].nama_produk %>
-                        </td>
-                        <td>$<%= produk[0].harga %>
-                        </td>
-                        <td>
-                            <%= produk[0].category %>
-                        </td>
-                        <td><i class="fa fa-star" style="font-size: 16px;"></i>
-                            <%= produk[0].rating %>
-                        </td>
-                        <td>
-                            <%= produk[0].brand %>
-                        </td>
-                    </tr>
-                </tbody>
+                <section class="prod-detail">
+                    <div class="prod-img">
+                        <img src="data:image/png;base64,<%= produk[0].imgHERE %>" alt="<%= produk[0].nama_produk %>">
+                        <!-- <div class="prod-variant">
+                            <div class="small-img-col">
+                                <img src="" class="variant" alt="prod-variant">
+                            </div>
+                        </div> -->
+                    </div>
+            
+                    <div class="prod-info">
+                        <h6 class="prod-cat"><%= produk[0].category %></h6>
+                        <h4 class="prod-name"><%= produk[0].nama_produk %></h4>
+                        <h2 class="prod-price">$<%= produk[0].harga %></h2>
+                        <!-- <select>
+                            <option>Select Colour</option>
+                            <option>white</option>
+                            <option>red</option>
+                        </select> -->
+                        <!-- <input type="number" value="1">
+                        <button class="me">Add To Cart</button> -->
+                        <h4 class="text-line">Product Details</h4>
+                        <span class="prod-desc"><%= produk[0].deskripsi %></span>
+                    </div>
             </main>
     <%- include('partials/footer') %>
+    

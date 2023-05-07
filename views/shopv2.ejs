@@ -2,6 +2,7 @@
         <%- include('partials/nav') %>
             <main class="content">
                 <h1>Products</h1>
+                <h3><%= msg %></h3>
                 <div class="products">
                     <% for (let produk of produks) { %>
                     <a href="/product?id=<%=produk.id%>">
