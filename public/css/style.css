@@ -131,6 +131,31 @@
 }
 
 /* contact-us */
+.pop-up{
+    width: 300px;
+    height: 300px;
+    background: red;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-pop{
+    
+}
+
+.box-pop img{
+    width: 120px;
+    height: 100px;
+    object-fit: cover;
+    
+}
+
 #banner-shop.contact-banner{
     background-image: url(../images/category/contact-banner.png);
     width: 100%;
@@ -528,7 +553,7 @@ main.content .category .cat-container {
     font-weight: bold;
     font-size: 18px;
     height: 110px;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 
 .products a .prod-box span.prod-brand {
