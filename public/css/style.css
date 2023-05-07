@@ -359,7 +359,17 @@ a.banner:hover img::before{
     padding: 8px;
     outline: none;
     border-radius: 10px;
-    border: none;
+    border: var(--active-text-col) solid 2px;
+    background: var(--main-bg-col);
+    color: var(--main-text-col);
+}
+
+.navbar .navbar-righty .search input {
+    width: max-content;
+}
+
+.navbar .navbar-righty .search button:hover {
+    background: var(--active-text-col);
 }
 
 /* Elemen <ul>, Navigation Bar bagian kanan */
@@ -440,6 +450,14 @@ main.main h1 {
     word-wrap: break-word;
 }
 
+main.content h3 {
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 7px;
+    margin-bottom: 19px;
+    margin-top: -30px;
+}
+
 main.content .category .cat-container {
     display: flex;
     flex-wrap: wrap;
@@ -496,7 +514,7 @@ main.content .category .cat-container {
     margin: 28px;
     padding: 18px;
     background: var(--main-text-col);
-    border-radius: 15px 5px 15px;
+    border-radius: 0 20px 0 0;
     width: 224px;
     /* overflow: scroll; */
 }
@@ -510,6 +528,7 @@ main.content .category .cat-container {
     font-weight: bold;
     font-size: 18px;
     height: 110px;
+    overflow-y: scroll;
 }
 
 .products a .prod-box span.prod-brand {
@@ -580,6 +599,45 @@ main.content .category .cat-container {
 .main form button {
     margin-top: 6px;
 }
+
+/* product.ejs */
+.prod-detail { 
+    display: flex; 
+    padding: 15px;
+    background: red;
+    width: min-content;
+    /* justify-content: space-between; */
+}
+
+.prod-detail .prod-img img {
+    width: 339px;
+    height: 100%;
+    border: var(--main-text-col) 3.5px solid;
+}
+
+.prod-detail .prod-info {
+    border: 2px cyan solid;
+    padding: 15px;
+    margin-left: 20px;
+    width: 566px;
+}
+
+.prod-detail .prod-info * { margin-bottom: 16px; }
+
+.prod-detail .prod-info .prod-cat {
+    letter-spacing: 7px;
+    font-size: 24px;
+}
+
+.prod-detail .prod-info .prod-name {
+    color: #fff;
+    font-size: 36px;
+}
+
+.prod-detail .prod-info .text-line {
+    font-weight: 600;
+}
+
 
 /* Footer */
 .cons{
