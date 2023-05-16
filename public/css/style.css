@@ -133,7 +133,7 @@
 /* contact-us */
 .pop-up {
     position: fixed;
-    display: flex;
+    display: none;
     width: 100%;
     height: 100%;
     top: 0;
@@ -413,11 +413,8 @@ a.banner:hover img::before{
 /* Elemen <ul>, Navigation Bar bagian kanan */
 .navbar .navbar-righty .navbar-nav{
     display: flex;
-    width: 550px;
     list-style: none;
     justify-content: center;
-    align-items: center;
-    /* background: #FFF; */
     align-items: center;
     height: 100%;
 }
