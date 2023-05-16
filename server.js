@@ -55,7 +55,7 @@ app.get("/product", (req, res) => {
     q = `SELECT * FROM \`produk\` WHERE id = '${req.query.id}'`  
     db.query(q, (err, result) => {
         const produk = JSON.parse(JSON.stringify(result))
-        res.render("product", {title: "Summary", produk: produk, active: "shop"}) 
+        res.render("product", {title: `${produk[0].nama_produk}`, produk: produk, active: "shop"}) 
         // console.log("hasil ->", produk[0].id)
     })
 })
@@ -68,8 +68,7 @@ app.post("/upload", upload.single("ProductImage"), (req, res) => {
         price = req.body.price,
         category = req.body.category,
         rating = req.body.rating,
-        brand = req.body.brand,
-        description = req.body.deskripsi
+        brand = req.body.brand
     
     db.query(q, [name, price, image, category, rating, brand], (err, rows, fields) => {
         if (err) throw err
